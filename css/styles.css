@@ -191,7 +191,22 @@ section {
 .about-article .about-description p {
   color: #656668;
 }
+.about-article .about-description p strong {
+  color: #121212;
+  text-decoration: underline #99befa;
+}
+.about-article .about-description p a {
+  transition: all 150ms linear;
+  text-decoration: underline #1dac7c;
+}
+.about-article .about-description p a:hover {
+  color: #1dac7c;
+}
 .about-article .about-devtools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   text-align: center;
   border: 1px solid #cedffc;
   border-radius: 3px;
@@ -250,28 +265,40 @@ section {
 .project-title {
   margin-bottom: 0.5em;
   width: max-content;
+  background-image: linear-gradient(#0950a5, #0950a5);
+  background-size: 100% 10%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .project-content {
   cursor: pointer;
+  border-radius: 5px;
   transition: all 200ms linear;
 }
 .project-content:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   filter: brightness(1.1);
+}
+
+.project-1 {
+  background-image: url("../public/images/sabores-de-laura-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .project-image {
   margin: 0;
   width: 100%;
-  height: 250px;
-  background: #121212;
+  height: 15rem;
   border-radius: 5px;
 }
 .project-image--active {
   margin: 0;
   width: 100%;
-  height: 250px;
-  background: linear-gradient(-45deg, #1dac7c, #0039a9);
+  height: 15rem;
+  background-image: linear-gradient(-45deg, #1dac7c, #0039a9);
   border-radius: 5px;
 }
 
@@ -304,7 +331,8 @@ section {
   margin-top: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .button--project-description {
@@ -315,6 +343,7 @@ section {
 .button--project-description:hover {
   background: #fcfcfc;
   color: #1dac7c;
+  transform: none;
 }
 
 #contact-section {
@@ -331,9 +360,15 @@ section {
   color: #656668;
 }
 .contact-email .email {
+  display: block;
   font-size: 1.5rem;
   color: #0950a5;
   text-decoration: underline #1dac7c;
+  transition: all 200ms ease-in;
+}
+.contact-email .email:hover {
+  color: #1dac7c;
+  transform: translateY(-0.2rem);
 }
 
 .contact-socialmedia {
@@ -375,6 +410,12 @@ footer .footer-container ul li {
   transition: all 200ms linear;
 }
 footer .footer-container ul li:hover {
+  color: #1dac7c;
+}
+footer .footer-container a {
+  transition: all 200ms linear;
+}
+footer .footer-container a:hover {
   color: #1dac7c;
 }
 @media (min-width: 769px) {
