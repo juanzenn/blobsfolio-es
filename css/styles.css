@@ -211,7 +211,7 @@ section {
   border: 1px solid #cedffc;
   border-radius: 3px;
   padding-block: 1.25rem;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 .about-article .about-devtools .devtools-stack {
   display: flex;
@@ -243,6 +243,22 @@ section {
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 #work-section {
   margin-block: 3rem;
   padding-block: 3rem;
@@ -277,8 +293,7 @@ section {
   transition: all 200ms linear;
 }
 .project-content:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  filter: brightness(1.1);
+  filter: brightness(1.15);
 }
 
 .project-1 {
@@ -294,22 +309,19 @@ section {
   height: 15rem;
   border-radius: 5px;
 }
-.project-image--active {
-  margin: 0;
+
+.project-linear-bg {
+  display: none;
+}
+.project-linear-bg--active {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 15rem;
-  background-image: linear-gradient(-45deg, #1dac7c, #0039a9);
   border-radius: 5px;
+  background-image: linear-gradient(-45deg, #1dac7c, #0039a9);
 }
 
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .project-content {
   position: relative;
 }
@@ -318,7 +330,6 @@ section {
   display: none;
 }
 .project-description--active {
-  animation: show 200ms linear forwards;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
